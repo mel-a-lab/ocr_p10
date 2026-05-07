@@ -49,6 +49,12 @@ jobs:
         working-directory: front
         run: npm install
 
-      - name: Run frontend tests
+      - name: Run frontend tests with coverage
         working-directory: front
-        run: npm test -- --watch=false --browsers=ChromeHeadless
+        run: npm test -- --watch=false --browsers=ChromeHeadless --code-coverage
+
+      - name: Upload frontend coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-coverage
+          path: front/coverage/
