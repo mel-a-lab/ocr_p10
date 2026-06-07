@@ -93,11 +93,6 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v2
         with:
           projectBaseDir: ./front
-          args: >
-            -Dsonar.projectKey=mel-a-lab_ocr_p10_front
-            -Dsonar.organization=mel-a-lab
-            -Dsonar.host.url=https://sonarcloud.io
-            -Dsonar.javascript.lcov.reportPaths=coverage/bobapp/lcov.info
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_FRONT }}
 
@@ -106,7 +101,7 @@ jobs:
     needs: [ backend-tests, frontend-tests, sonar-backend, sonar-front ]
 
     steps:
-      - name: Checkout
+      - name: Checkoutfup
         uses: actions/checkout@v4
 
       - name: Build backend Docker image
