@@ -97,7 +97,7 @@ jobs:
             -Dsonar.projectKey=mel-a-lab_ocr_p10_front
             -Dsonar.organization=mel-a-lab
             -Dsonar.host.url=https://sonarcloud.io
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+            -Dsonar.javascript.lcov.reportPaths=coverage/bobapp/lcov.info
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_FRONT }}
 
