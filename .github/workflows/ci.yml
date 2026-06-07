@@ -92,7 +92,7 @@ jobs:
       - name: Run SonarCloud frontend analysis
         uses: SonarSource/sonarqube-scan-action@v5
         with:
-          projectBaseDir: front
+          projectBaseDir: ./front
           args: >
             -Dsonar.projectKey=mel-a-lab_ocr_p10_front
             -Dsonar.organization=mel-a-lab
