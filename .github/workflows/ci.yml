@@ -90,7 +90,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run SonarCloud frontend analysis
-        uses: SonarSource/sonarqube-scan-action@v5
+        uses: SonarSource/sonarqube-scan-action@v2
         with:
           projectBaseDir: ./front
           args: >
